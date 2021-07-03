@@ -1,0 +1,20 @@
+{
+  "name": "Reliable Tutorials",
+  "version": "1.0.0",
+  "description": "Reliable Tutorials by Jovin Rodrigues",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pexeixv/reliabletutorials.git"
+  },
+  "keywords": [],
+  "author": "Gavin Pereira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pexeixv/reliabletutorials/issues"
+  },
+  "homepage": "https://github.com/pexeixv/reliabletutorials#readme"
+}
