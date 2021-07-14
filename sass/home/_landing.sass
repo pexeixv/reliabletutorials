@@ -1,0 +1,66 @@
+.landing_outer
+    position: relative
+    min-height: 100vh
+
+.landing_outer::before
+    opacity: 0.05
+    z-index: -1
+    content: ''
+    height: 100%
+    width: 100%
+    position: absolute
+    background: url('../img/images/board.jpg') no-repeat center center/cover
+
+.landing
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+
+.landing_main
+    overflow: visible
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+    width: 100vw
+
+.landing_hero
+    overflow: visible
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: flex-end
+    width: 50vw
+    height: calc( 100vh - #{$headerHeight})
+    // background: url('../img/images/hero.png') no-repeat left top/cover
+
+.landing_text
+    width: calc( #{$documentWidth} / 2 )
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+
+.landing_header
+    height: $headerHeight
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    padding: 0.5em 0
+    margin: 1em 0 0
+    gap: 1em
+
+.landing_title
+    font-size: 6rem
+    font-weight: 900
+    line-height: 1
+
+.landing_desc
+    font-size: 1.7rem
+
+.landing_cta
+    margin-top: 1em

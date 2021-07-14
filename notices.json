@@ -1,4 +1,4 @@
-export var notices = [
+[
     {
         "position": 1,
         "title": "titleA",
@@ -29,5 +29,4 @@ export var notices = [
         "desc": "Description",
         "date": "12 July 2021"
     }
-
 ]

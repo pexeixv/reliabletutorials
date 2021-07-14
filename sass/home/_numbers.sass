@@ -1,0 +1,42 @@
+.numbers_outer
+    background: $primary
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    padding-bottom: 5rem
+    position: relative
+
+.numbers_grid
+    position: absolute
+    top: 12rem
+    left: 0
+    right: 0
+    max-width: 630px
+    margin: 0 auto
+    display: grid
+    grid-template-columns: repeat(2,1fr)
+    justify-items: center
+
+.numbers_title
+    color: $light
+
+.number
+    // cursor: pointer
+    background: $light
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 1.5em 1em
+    border-radius: 20px
+    width: 270px
+    box-shadow: $boxShadow
+
+.number_number
+    font-size: 5rem
+    font-style: 400px
+
+.number_desc
+    font-size: 1rem
+    text-transform: uppercase
+    font-weight: 900
