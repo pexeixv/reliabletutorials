@@ -1,0 +1,60 @@
+.testimonials_outer
+    margin-top: 10rem
+
+.testimonials_grid
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    justify-items: center
+    text-align: center
+    grid-gap: 2em
+
+.testimonial
+    @extend .box-shadow
+    @extend .border-radius
+    max-width: 400px
+    padding: 1.5em 2em
+    display: flex
+    flex-direction: column
+    align-items: center
+    &_name
+        font-size: 1.4rem
+    &_image
+        overflow: hidden
+        height: 100px
+        border-radius: 50%
+        position: relative
+        &::before
+            background: $primary
+            opacity: 0.3
+            content: ''
+            position: absolute
+            inset: 0
+
+    &_designation
+        font-weight: 400
+        font-style: italic
+        font-size: 0.9rem
+    &_quote
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        flex: 1
+        margin: 1.5em 0
+        text-align: left
+        font-weight: 500
+        font-size: 0.95rem
+        position: relative
+        padding: 0 0.5em
+        .testimonial_icon
+            position: absolute
+            height: 5rem
+            opacity: 0.08
+            z-index: -1
+            &-open
+                transform: rotate(180deg)
+                top: -30%
+                left: 0
+            &-close
+                bottom: -15%
+                right: 0
