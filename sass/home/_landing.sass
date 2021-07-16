@@ -6,10 +6,16 @@
     opacity: 0.05
     z-index: -1
     content: ''
-    height: 100%
-    width: 100%
     position: absolute
+    inset: 0
     background: url('../img/images/board.jpg') no-repeat center center/cover
+
+.landing_outer::after
+    // content: ''
+    inset: 0
+    position: absolute
+    z-index: 2
+    // background: linear-gradient(360deg, rgba(52,107,49,1) 0%, rgba(52,107,49,0.8995973389355743) 4%, rgba(52,107,49,0) 33%, rgba(52,107,49,0) 100%)
 
 .landing
     min-height: 100vh
@@ -35,7 +41,12 @@
     width: 50vw
     height: calc( 100vh - #{$headerHeight})
     // background: url('../img/images/hero.png') no-repeat left top/cover
-
+    position: relative
+    &::after
+        content: ''
+        inset: 0
+        position: absolute
+        z-index: 2
 .landing_text
     width: calc( #{$documentWidth} / 2 )
     display: flex
