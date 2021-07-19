@@ -511,6 +511,19 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9rem;
 }
 
+@media screen and (max-width: 900px) {
+  .notices_grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .notice {
+    max-width: 80%;
+  }
+  .notices_outer {
+    margin-top: 10rem;
+  }
+}
+
 .about_outer {
   margin-top: 5rem;
 }
