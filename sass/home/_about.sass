@@ -10,9 +10,10 @@
     gap: 4em
     display: flex
     flex-direction: row
-    > div
-        width: 100%
-        min-height: 300px
+
+.about_text,.about_image
+    width: 100%
+    min-height: 300px
 
 .about_image
     background: url('../img/images/class.jpg') no-repeat center center/cover
@@ -30,3 +31,14 @@
     justify-content: center
     height: 100%
     gap: 1em
+
+@media screen and ( max-width: 900px )
+    .about_main
+        flex-direction: column
+        gap: 2em
+    .about_text
+        min-height: unset
+        font-size: 1.1rem
+        padding: 0 1em
+    .about_outer
+        margin-top: 2rem
