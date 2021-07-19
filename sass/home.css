@@ -149,6 +149,19 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 900px) {
+  .footer_outer {
+    margin-top: 3rem;
+  }
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.8em;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 12px;
   background: #e2e2e2;
