@@ -17,6 +17,9 @@
     display: grid
     grid-template-columns: repeat(2,1fr)
     justify-items: center
+    align-items: center
+    align-content: center
+    justify-content: center
 
 .numbers_title
     color: $light
@@ -40,6 +43,10 @@
     font-size: 1rem
     text-transform: uppercase
     font-weight: 900
+
+@media screen and ( min-width: 900px )
+    .numbers_title_break
+        content: ''
 
 @media screen and ( max-width:  900px)
     .numbers_grid
