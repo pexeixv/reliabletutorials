@@ -853,4 +853,23 @@ textarea:-ms-input-placeholder {
   font-family: 'Barlow', sans-serif;
   font-size: 0.77rem;
 }
+
+@media screen and (max-width: 900px) {
+  .contact_main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact_map iframe {
+    max-height: 350px;
+  }
+  .contact_details {
+    margin: 0 auto;
+    font-size: 1.05rem;
+  }
+  .contact_submit {
+    margin: 0.5em auto;
+  }
+}
 /*# sourceMappingURL=home.css.map */
