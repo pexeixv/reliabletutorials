@@ -96,6 +96,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 900px) {
+  .section_title {
+    margin: 1.2em 0;
+    font-size: 2.8rem;
+  }
+}
+
 .footer_outer {
   margin-top: 7rem;
   background: #346B31;
@@ -441,16 +448,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 900px) {
   .numbers_grid {
-    top: 16rem;
+    top: 14rem;
   }
   .number_number {
     font-size: 3rem;
   }
   .number {
     width: 80%;
-  }
-  .numbers_title {
-    margin: 1.5em 0 1.2em;
   }
 }
 
