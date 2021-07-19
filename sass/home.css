@@ -41,6 +41,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
 }
 
+.outer {
+  width: 100vw;
+}
+
 .btn {
   border-radius: 5px;
   background: #346B31;
@@ -51,9 +55,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -65,6 +66,8 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   cursor: pointer;
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
 }
 
 .btn img {
@@ -137,6 +140,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .gavinpereira:hover span {
   text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: #e2e2e2;
+  -webkit-box-shadow: 0 0 2px -2px black;
+          box-shadow: 0 0 2px -2px black;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: black;
+  background: #A8A8A8;
+  cursor: pointer;
 }
 
 .landing_outer {
@@ -271,6 +292,75 @@ h1, h2, h3, h4, h5, h6 {
 
 .landing_cta {
   margin-top: 1em;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+  .landing_text {
+    padding-left: 3em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .landing_main {
+    gap: 3em;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .landing_text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 1em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .landing_hero {
+    height: auto;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: auto;
+    max-width: 555px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .landing_title {
+    font-size: 5rem;
+  }
+  .landing_desc {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .landing_title {
+    font-size: 4rem;
+  }
+  .landing_desc {
+    font-size: 1.2rem;
+  }
 }
 
 .numbers_outer {

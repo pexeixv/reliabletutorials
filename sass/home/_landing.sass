@@ -75,3 +75,41 @@
 
 .landing_cta
     margin-top: 1em
+
+@media screen and ( min-width: 1000px ) and (max-width: 1300px)
+    .landing_text
+        padding-left: 3em
+
+@media screen and ( max-width: 1000px )
+    .header
+        justify-content: center
+    .landing_main
+        gap: 3em
+        flex: 1
+        justify-content: flex-end
+        flex-direction: column
+    .landing_text
+        flex: 1
+        padding: 1em
+        justify-content: center
+        align-items: center
+        text-align: center
+    .landing_hero
+        height: auto
+        // flex: 1
+        justify-content: flex-end
+        align-items: flex-end
+        width: auto
+        max-width: 555px
+
+@media screen and ( max-width: 470px )
+    .landing_title
+        font-size: 5rem
+    .landing_desc
+        font-size: 1.5rem
+
+@media screen and ( max-width: 350px )
+    .landing_title
+        font-size: 4rem
+    .landing_desc
+        font-size: 1.2rem
