@@ -425,6 +425,21 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
 }
 
+@media screen and (max-width: 900px) {
+  .numbers_grid {
+    top: 16rem;
+  }
+  .number_number {
+    font-size: 3rem;
+  }
+  .number {
+    width: 80%;
+  }
+  .numbers_title {
+    margin: 1.5em 0 1.2em;
+  }
+}
+
 .notices_outer {
   margin-top: 15rem;
 }
