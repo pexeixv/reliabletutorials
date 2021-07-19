@@ -733,6 +733,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media screen and (min-width: 900px) {
+  .testimonials_title_break {
+    content: '';
+  }
+}
+
 .contact_outer {
   margin-top: 10rem;
 }
