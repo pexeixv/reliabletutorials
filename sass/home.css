@@ -517,7 +517,7 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
   }
   .notice {
-    max-width: 80%;
+    max-width: 380px;
   }
   .notices_outer {
     margin-top: 10rem;
@@ -682,6 +682,20 @@ h1, h2, h3, h4, h5, h6 {
 .testimonial_quote .testimonial_icon-close {
   bottom: -15%;
   right: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .testimonials_grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .testimonial {
+    max-width: 380px;
+  }
+}
+
+body {
+  overflow-x: unset;
 }
 
 .contact_outer {
