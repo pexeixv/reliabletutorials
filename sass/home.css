@@ -32,6 +32,10 @@ img {
   max-height: 100%;
 }
 
+.hidden {
+  display: none !important;
+}
+
 body {
   font-family: 'Barlow', sans-serif;
 }
