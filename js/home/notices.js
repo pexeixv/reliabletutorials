@@ -51,6 +51,12 @@ var inject = notices => {
             container.innerHTML += generateString(notice)
         )
         section.classList.remove('hidden')
+
+        if (noticesWhichHavePosition.length == 1)
+            container.classList.add('notices_grid-one')
+        if (noticesWhichHavePosition.length == 2)
+            container.classList.add('notices_grid-two')
+
     }
 
 }

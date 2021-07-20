@@ -18,6 +18,9 @@
         left: 0
     &:hover img
         left: 5px
+    &:focus
+        outline: 2px dotted $primary
+        outline-offset: 2px
 
 .section_title
     font-size: 3rem
@@ -31,6 +34,9 @@
 
 .border-radius
     border-radius: 20px
+
+*:focus
+    outline: 2px dotted $primary
 
 @media screen and ( max-width:  900px)
     .section_title

@@ -8,6 +8,7 @@
     gap: 2em
 
 .notice
+    max-width: 380px
     @extend .box-shadow
     @extend .border-radius
     text-align: center
@@ -35,10 +36,16 @@
 .notice_date
     font-size: 0.9rem
 
+.notices_grid-one
+    grid-template-columns: repeat(1,1fr)
+
+.notices_grid-two
+    margin: 0 auto
+    grid-template-columns: repeat(2,1fr)
+    max-width: 760px
+
 @media screen and ( max-width: 900px )
     .notices_grid
         grid-template-columns: 1fr
-    .notice
-        max-width: 380px
     .notices_outer
         margin-top: 10rem

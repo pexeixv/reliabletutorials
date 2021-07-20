@@ -88,6 +88,11 @@ h1, h2, h3, h4, h5, h6 {
   left: 5px;
 }
 
+.btn:focus {
+  outline: 2px dotted #346B31;
+  outline-offset: 2px;
+}
+
 .section_title {
   font-size: 3rem;
   margin: 1.5em 0;
@@ -103,6 +108,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .border-radius, .number, .notice, .testimonial, .contact_map, input, textarea {
   border-radius: 20px;
+}
+
+*:focus {
+  outline: 2px dotted #346B31;
 }
 
 @media screen and (max-width: 900px) {
@@ -156,6 +165,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .gavinpereira:hover span {
   text-decoration: underline;
+}
+
+.gavinpereira:focus {
+  outline-color: white;
 }
 
 @media screen and (max-width: 900px) {
@@ -307,6 +320,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.5em 0;
   margin: 1em 0 0;
   gap: 1em;
+}
+
+.header_logo_anchor {
+  height: 100%;
 }
 
 .landing_title {
@@ -494,6 +511,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .notice {
+  max-width: 380px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -533,13 +551,22 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9rem;
 }
 
+.notices_grid-one {
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+.notices_grid-two {
+  margin: 0 auto;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  max-width: 760px;
+}
+
 @media screen and (max-width: 900px) {
   .notices_grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-  }
-  .notice {
-    max-width: 380px;
   }
   .notices_outer {
     margin-top: 10rem;
@@ -897,6 +924,12 @@ input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   font-family: 'Barlow', sans-serif;
   font-size: 0.77rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  -webkit-box-shadow: 0px 0 10px rgba(52, 107, 49, 0.6);
+          box-shadow: 0px 0 10px rgba(52, 107, 49, 0.6);
 }
 
 @media screen and (max-width: 900px) {
