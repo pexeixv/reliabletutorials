@@ -1,0 +1,20 @@
+[
+    {
+        "image": "img/images/person.jpg",
+        "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim.",
+        "name": "Rahul Morajker",
+        "desgn": "Designation, Company"
+    },
+    {
+        "image": "img/images/person.jpg",
+        "quote": "Enim turpis magna sodales sem sed pretium, feugiat sodales elementum enim sed iaculis justo velit ut viverra aenean ut amet in elit fames nisl mattis pretium lorem libero felis aliquet.",
+        "name": "Vaibhav Kamat",
+        "desgn": "Designation, Company"
+    },
+    {
+        "image": "img/images/person.jpg",
+        "quote": "Sagittis nibh gravida ultricies convallis sit lacus sapien venenatis, vitae consectetur pellentesque habitasse donec pellentesque quis cras tempor tempus vel, imperdiet risus erat at varius dui mauris pulvinar ipsum tellus.",
+        "name": "Varel D'souza",
+        "desgn": "Designation, Company"
+    }
+]
