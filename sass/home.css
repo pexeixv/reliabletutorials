@@ -202,6 +202,31 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
+noscript div {
+  min-height: 100vh;
+  background: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+}
+
+noscript div a {
+  color: white;
+  text-decoration: underline;
+}
+
 .landing_outer {
   position: relative;
   min-height: 100vh;
