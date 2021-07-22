@@ -8,3 +8,5 @@ Notices.set()
 import * as Numbers from './home/numbers.js'
 Numbers.listenForScrollAndStartCounter()
 
+
+
