@@ -16,6 +16,7 @@ Numbers.listenForScrollAndStartCounter()
 var scrollListener = () => {
     var titles = document.querySelectorAll('.section_title')
     var testimonials = document.querySelectorAll('.testimonial')
+    var testimonialsGrid = document.querySelector('.testimonials_grid')
     var notices = document.querySelectorAll('.notice')
     var scroll = window.innerHeight
     titles.forEach(title => {
@@ -23,11 +24,16 @@ var scrollListener = () => {
         if (scroll > top)
             title.style.animation = `slideIn 300ms forwards linear`
     })
+    var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
     var delay = 200
     testimonials.forEach(testimonial => {
         var top = testimonial.getBoundingClientRect().top
         if (scroll > top + 200) {
-            testimonial.style.animation = `slideUp 300ms forwards linear ${delay}ms`
+
+            if (vw > 900)
+                testimonial.style.animation = `slideUp 300ms forwards linear ${delay}ms`
+            else
+                testimonial.style.animation = `slideUp 300ms forwards linear`
             delay += 500
         }
     })
@@ -35,7 +41,10 @@ var scrollListener = () => {
     notices.forEach(notice => {
         var top = notice.getBoundingClientRect().top
         if (scroll > top + 100) {
-            notice.style.animation = `slideUp 300ms forwards linear ${delay}ms`
+            if (vw > 900)
+                notice.style.animation = `slideUp 300ms forwards linear ${delay}ms`
+            else
+                notice.style.animation = `slideUp 300ms forwards linear`
             delay += 500
         }
     })
@@ -43,6 +52,6 @@ var scrollListener = () => {
 
 }
 window.addEventListener('scroll', scrollListener)
-
+scrollListener()
 
 
