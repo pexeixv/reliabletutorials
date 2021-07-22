@@ -21,17 +21,18 @@ var startCounter = () => {
     })
 }
 
-var scroll
-var firstTime = true
 
 export var listenForScrollAndStartCounter = () => {
-    window.addEventListener('scroll', () => {
+    var scroll
+    var scrollListener = () => {
         scroll = window.scrollY + window.innerHeight - 70
-        if ((scroll > gridTop) && firstTime) {
+        if (scroll > gridTop) {
             startCounter()
-            firstTime = false
+            window.removeEventListener('scroll', scrollListener)
         }
-    })
+    }
+
+    window.addEventListener('scroll', scrollListener)
 }
 
 
