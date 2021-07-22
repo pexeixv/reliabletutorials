@@ -31,7 +31,7 @@ export var listenForScrollAndStartCounter = () => {
             window.removeEventListener('scroll', scrollListener)
         }
     }
-
+    scrollListener()
     window.addEventListener('scroll', scrollListener)
 }
 
