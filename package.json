@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description": "Reliable Tutorials by Jovin Rodrigues",
   "main": "index.html",
-  "scripts": {
-    "dev": "go-live"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pexeixv/reliabletutorials.git"
+    "url": "https://github.com/pexeixv/reliabletutorials.git"
   },
   "keywords": [],
   "author": "Gavin Pereira",
@@ -16,5 +14,5 @@
   "bugs": {
     "url": "https://github.com/pexeixv/reliabletutorials/issues"
   },
-  "homepage": "https://github.com/pexeixv/reliabletutorials#readme"
+  "homepage": "rt.gavinpereira.in"
 }
