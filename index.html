@@ -35,21 +35,16 @@
         </div>
     </noscript>
 
-    <script>
-        var ctaButtonClicked = () => {
-            document.querySelector('.numbers').scrollIntoView()
-        }
-    </script>
 
 
     <!-- Landing Area Starts -->
     <section class="landing_outer outer">
         <div class="landing landing_inner inner">
             <header class="landing_header header">
-                <a href="#" class="header_logo_anchor">
+                <!-- <a href="#" class="header_logo_anchor">
                     <img src="//i1.wp.com/tecuniversitario.net/wp-content/uploads/2020/07/logoipsum.png?ssl=1"
                         alt="Reliable Tutorials Logo" class="header_logo">
-                </a>
+                </a> -->
                 <!-- <span class="header_name">Reliable Tutorials</span> -->
             </header>
             <div class="landing_main">
@@ -59,7 +54,7 @@
                     <p class="landing_desc">
                         Mathematics tuitions for HSSC & GCET in Vasco.
                     </p>
-                    <a class="landing_cta cta btn" onclick="ctaButtonClicked()">
+                    <a class="landing_cta cta btn" onclick="document.querySelector('.numbers').scrollIntoView()">
                         <span class="cta_title">Learn more</span>
                         <img src="img/icons/chevron.svg" class="cta_icon">
                     </a>
@@ -179,24 +174,36 @@
                         </a>
                         <a href="#" class="contact_detail contact_detail-address">
                             <img src="img/icons/location.svg" class="contact_icon">
-                            <p>St. Andrew’s Church
+                            <p>Chase Enclave
                                 <br>Vasco-da-Gama
                                 <br>GOA 403802
                             </p>
                         </a>
                     </div>
                     <div class="contact_form">
-                        <form action="">
+
+                        <form action="https://formsubmit.co/8ff0de8a03715c3a0927fd448c87f8af" method="POST">
                             <div class="form_row">
-                                <input type="text" name="name" id="form_name" placeholder="Name">
-                                <input type="email" name="emai" id="form_email" placeholder="Email ID">
+                                <input type="text" name="Name" id="form_name" placeholder="Name" required="required">
+                                <input type="email" name="email" id="form_email" placeholder="Email ID"
+                                    required="required">
                             </div>
-                            <textarea type="text" name="message" id="form_message" placeholder="Message"></textarea>
+                            <textarea type="text" name="Message" id="form_message" placeholder="Message"
+                                required="required"></textarea>
+                            <input type="hidden" name="_next" value="//localhost:5500">
+                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_subject" value="New message at ReliableTutorials.com!">
+                            <!-- <input type="hidden" name="_autoresponse"
+                                value="Your message  was successfully sent to ReliableTutorials! We will get in touch "> -->
+                            <input type="hidden" name="_captcha" value="false">
+
                             <button type="submit" class="contact_submit btn">
                                 <span class="btn_title">Send</span>
                                 <img src="img/icons/chevron.svg" class="btn_icon">
                             </button>
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -218,8 +225,6 @@
         </footer>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/CSSRulePlugin.min.js"></script>
     <script type="module" src="js/index.js" defer></script>
 
 

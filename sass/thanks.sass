@@ -1,0 +1,54 @@
+@import general/index
+
+.thanks
+    padding: 4rem 0
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+.thanks_title
+    opacity: 1
+    margin-bottom: 0
+    text-align: left
+.thanks_desc
+    margin: 0.5em 0 2em
+    text-align: left
+
+.thanks_btn
+    img
+        position: relative
+        transform: rotate(180deg)
+        left: 0
+    &:hover img
+        left: -5px
+
+.thanks_heading
+    font-size: 2rem
+    margin-right: 0.2em
+    font-weight: 900
+    line-height: 1
+
+.thanks_subheading
+    font-size: 1.3rem
+    font-weight: 600
+
+.thanks_heading,.thanks_subheading
+    display: inline
+
+body
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+@media screen and ( min-width: 630px )
+    .thanks_title_break
+        content: ''
+
+@media screen and ( max-width: 600px )
+    .thanks_heading,.thanks_subheading
+        display: block
+
+@media screen and ( max-width: 470px )
+    .thanks_title
+        margin-top: 3rem
