@@ -7,13 +7,6 @@ Notices.set()
 import * as Testimonials from './home/testimonials.js'
 Testimonials.set()
 
-
-
-
-
 import * as Animation from './home/animation.js'
 Animation.add()
-
-
-
 

@@ -35,6 +35,12 @@
         </div>
     </noscript>
 
+    <script>
+        var ctaButtonClicked = () => {
+            document.querySelector('.numbers').scrollIntoView()
+        }
+    </script>
+
 
     <!-- Landing Area Starts -->
     <section class="landing_outer outer">
@@ -48,14 +54,13 @@
             </header>
             <div class="landing_main">
                 <div class="landing_text">
-                    <h1 class="landing_title">
-                        Reliable <br> Tutorials
-                    </h1>
-                    <h2 class="landing_desc">
-                        by Jovin Rodrigues
-                    </h2>
-                    <a href="#" class="landing_cta cta btn">
-                        <span class="cta_title">CTA</span>
+                    <h1 class="landing_title">Reliable <br> Tutorials</h1>
+                    <h2 class="landing_subtitle">by Jovin Rodrigues</h2>
+                    <p class="landing_desc">
+                        Mathematics tuitions for HSSC & GCET in Vasco.
+                    </p>
+                    <a class="landing_cta cta btn" onclick="ctaButtonClicked()">
+                        <span class="cta_title">Learn more</span>
                         <img src="img/icons/chevron.svg" class="cta_icon">
                     </a>
                 </div>
@@ -102,9 +107,7 @@
 
     <section class="notices_outer outer">
         <div class=" notices notices_inner inner hidden">
-            <h2 class="notices_title section_title">
-                Take note
-            </h2>
+            <h2 class="notices_title section_title">Take note</h2>
             <div class="notices_grid"></div>
         </div>
     </section>
@@ -145,12 +148,9 @@
 
     <section class="testimonials_outer outer">
         <div class="testimonials testimonials_inner inner">
-            <h2 class="testimonials_title section_title">
-                Here’s what my <br class="testimonials_title_break">ex-students say
-            </h2>
-            <div class="testimonials_grid">
-                <!-- Generated Dynamically -->
-            </div>
+            <h2 class="testimonials_title section_title">Here’s what my <br class="testimonials_title_break">ex-students
+                say</h2>
+            <div class="testimonials_grid"></div>
         </div>
     </section>
 
