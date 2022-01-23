@@ -1,18 +1,13 @@
 {
-  "name": "Reliable Tutorials",
-  "version": "1.0.0",
-  "description": "Reliable Tutorials by Jovin Rodrigues",
-  "main": "index.html",
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pexeixv/reliabletutorials.git"
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
   "keywords": [],
   "author": "Gavin Pereira",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pexeixv/reliabletutorials/issues"
-  },
-  "homepage": "rt.gavinpereira.in"
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
 }

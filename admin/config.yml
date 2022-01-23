@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "public/notice/assets"
+public_folder: "/notice"
+publish_mode: editorial_workflow
+collections:
+  - name: "notices"
+    label: "Notices"
+    folder: "notice"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "hidden",
+          default: ["notice", "featured"],
+        }
+      - { label: "Draft", name: "draft", widget: "boolean", default: true }

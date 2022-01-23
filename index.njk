@@ -15,7 +15,7 @@
     <meta property="og:image" content="https://reliabletutorials.com/img/images/hero-preview.jpg">
     <meta property="og:type" content="website">
 
-    <link rel="shortcut icon" href="img/fav/fav-min.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/fav/new-fav.svg" type="image/x-icon">
     <link rel="stylesheet" href="sass/home.css">
 
 </head>
@@ -68,7 +68,7 @@
                     </a>
                 </div>
                 <div class="landing_hero hero">
-                    <img src="img/images/hero.png" alt="" class="hero_image">
+                    <img src="img/images/hero-new.png" alt="" class="hero_image">
                 </div>
             </div>
 
@@ -87,18 +87,17 @@
                 The numbers speak<br class="numbers_title_break"> for themselves
             </h2>
             <div class="numbers_grid">
+
+                {% for number in numbers %}
                 <div class="number">
-                    <h4 class="number_number counter" data-target="5500">
-                        0
+                    <h4 class="number_number counter" data-target="{{number.end}}">
+                        {{number.start}}
                     </h4>
-                    <p class="number_desc">Students<br>Mentored</p>
+                    <p class="number_desc">{{number.desc1}}<br>{{number.desc2}}</p>
                 </div>
-                <div class="number">
-                    <h4 class="number_number counter" data-target="32">
-                        0
-                    </h4>
-                    <p class="number_desc">Years of<br>Experience</p>
-                </div>
+                {% endfor %}
+                
+
             </div>
         </div>
     </section>
@@ -107,14 +106,25 @@
 
 
     <!-- Notices Section Starts -->
+        <section class="notices_outer outer">
+    {% if collections.notice | length %}
+            <div class=" notices notices_inner inner">
+                <h2 class="notices_title section_title">Take note</h2>
+                <div class="notices_grid">
 
-    <section class="notices_outer outer">
-        <div class=" notices notices_inner inner hidden">
-            <h2 class="notices_title section_title">Take note</h2>
-            <div class="notices_grid"></div>
-        </div>
-    </section>
 
+                    {% for notice in collections.notice %}
+                        <div class="notice">
+                            <span class="notice_date">{{ notice.data.date | postDate }}</span>
+                            <h4 class="notice_title">{{notice.data.title}}</h4>
+                            <p class="notice_desc">{{notice.data.description}}</p>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+    {% endif %}
+        </section>
     <!-- Notices Section Starts -->
 
 
@@ -127,14 +137,13 @@
             </h2>
             <div class="about_main">
                 <div class="about_text">
-                    <p class="about_para">Volutpat lorem turpis maecenas proin tortor eros. Nulla nulla lacinia quam
-                        nisl, mattis. Arcu dui mauris purus auctor nisl, egestas sit ornare. Amet et nisl, eu lorem.
-                        Molestie leo tellus dolor ultrices phasellus sit arcu quam arcu. Phasellus velit integer ac,
-                        rhoncus mus etiam eleifend. Porttitor orci, commodo neque tellus ultricies</p>
-                    <p class="about_para">Ac, faucibus amet et sed. Sem aliquam sed bibendum malesuada sit. Ultrices
-                        posuere quam sit cursus. Diam diam ornare accumsan eu, pulvinar diam a consequat gravida. In
-                        enim, donec a, neque odio accumsan volutpat nunc, porta. Interdum ullamcorper in nisl accumsan,
-                        at. Dictum posuere et praesent amet.</p>
+                    <p class="about_para" style="font-size:1.1rem;line-height:1.7">Reliable Tutorials is a Mathematics coaching center for HSSC and GCET. Situated in
+                        the heart of Vasco, the center has been one of the best in the city. Reliable Tutorials
+                        has produced impressive results every year during the course of the past 10 years. Mentored by Jovino Rodrigues,
+                        a renowned teacher with over 39 years of experience and in his field. 
+
+                        </p>
+                    
                 </div>
                 <div class="about_image"></div>
             </div>
@@ -149,13 +158,36 @@
 
     <!-- Testimonials Section Starts -->
 
+    {#
+    
     <section class="testimonials_outer outer">
         <div class="testimonials testimonials_inner inner">
             <h2 class="testimonials_title section_title">Here’s what my <br class="testimonials_title_break">ex-students
                 say</h2>
-            <div class="testimonials_grid"></div>
+            <div class="testimonials_grid">
+
+                {% for testi in testimonials %}
+                    <div class="testimonial">
+                <div class="testimonial_image">
+                    <img src="{{testi.image}}" alt="{{testi.name}}" loading="lazy">
+                </div>
+                <p class="testimonial_quote">
+                    <img src="img/icons/quotes.svg" class="testimonial_icon testimonial_icon-open" loading="lazy">
+                        {{testi.quote}}
+                    <img src="img/icons/quotes.svg" class="testimonial_icon testimonial_icon-close" loading="lazy">
+                </p>
+                <h5 class="testimonial_name">{{testi.name}}</h5>
+                <span class="testimonial_designation">{{testi.desg}}</span>
+            </div>
+                {% endfor %}
+
+
+            </div>
         </div>
-    </section>
+    </section> 
+    
+    
+    #}
 
     <!-- Testimonials Section Ends -->
 
@@ -206,7 +238,6 @@
                             <input type="hidden" name="_subject" value="New message at ReliableTutorials.com!">
                             <!-- <input type="hidden" name="_autoresponse"
                                 value="Your message  was successfully sent to ReliableTutorials! We will get in touch "> -->
-                            <input type="hidden" name="_captcha" value="false">
 
                             <button type="submit" class="contact_submit btn">
                                 <span class="btn_title">Send</span>
@@ -225,7 +256,7 @@
     <section class="footer_outer outer">
         <footer class="footer footer_inner inner">
             <span class="copyright">
-                &copy; Copyright 2021 - Reliable Tutorials.
+                &copy; Copyright {% year %} - Reliable Tutorials.
             </span>
             <a class="gavinpereira" href="//gavinpereira.in" target="_blank">
                 <img src="img/icons/code.svg" alt="Developed">
